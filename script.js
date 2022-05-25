@@ -32,12 +32,14 @@ const RARES = [
 	{name : "DLude-Brage", image : "images/dlude_brage.jpg"},
 	{name : "Fotande Riddle", image : "images/fotande_riddle.jpg"},
 	{name : "Klappad Riddle", image : "images/klappad_riddle.jpg"},
+	{name: "Digital Kiren", image: "images/digital_kiren.jpg"},
 ];
 const LEGENDARIES = [
 	{
 		name : "Bild-på-bild på patet",
 		image : "images/bild_pa_bild_pa_patet.jpeg"
 	},
+	{ name: "Surprised Partyroot", image: "images/equeroot.jpg"}
 ];
 
 const TOTAL_CARDS = COMMONS.length + RARES.length + LEGENDARIES.length;
