@@ -6,17 +6,45 @@
 	display: block;
 	background-size: cover;
 	background-repeat: no-repeat;
-	border-radius: 2%;
+	border-radius: 6vw;
 	inner-border: 5px solid yellow;
+	box-sizing: border-box;
 }
 
 #title {
 	width: 100%;
-
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	font-size: xxx-large;
+	border: 1vw solid yellow;
+	background-color: #996600;
+	color: white;
+	height: 8%;
+	box-sizing: border-box;
+	border-top-left-radius: 5vw;
+	border-top-right-radius: 5vw;
+	margin-bottom: 0;
 }
 
 #stats {
+	box-sizing: border-box;
+	margin-top: 114%;
+	height: 12%;
+	width: 100%;
+	background-color:  #BB8822;
+	font-size: xx-large;
+	border-bottom-left-radius: 5vw;
+	border-bottom-right-radius: 5vw;
 
+	position: flex;
+	bottom: 0;
+}
+
+.stat {
+	width: 50%;
+	text-align: center;
 }
 
 html body {

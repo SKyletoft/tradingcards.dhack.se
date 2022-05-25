@@ -58,4 +58,6 @@ generate_card();
 update_card_size();
 window.addEventListener("resize", update_card_size);
 
+setTimeout(() => { location.reload(true); }, 500);
+
 // BODY.innerHTML += `<img src="${image.image}" />"`;
