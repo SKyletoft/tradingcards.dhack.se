@@ -32,14 +32,16 @@ const RARES = [
 	{name : "DLude-Brage", image : "images/dlude_brage.jpg"},
 	{name : "Fotande Riddle", image : "images/fotande_riddle.jpg"},
 	{name : "Klappad Riddle", image : "images/klappad_riddle.jpg"},
-	{name: "Digital Kiren", image: "images/digital_kiren.jpg"},
+	{name : "Digital Kiren", image : "images/digital_kiren.jpg"},
+	{name : "Åttaögad Kiren", image : "images/attaogad_kiren.jpeg"},
+	{name : "Bordsbärande Pateter", image : "images/bordsbarande_pateter.jpeg"},
 ];
 const LEGENDARIES = [
 	{
 		name : "Bild-på-bild på patet",
 		image : "images/bild_pa_bild_pa_patet.jpeg"
 	},
-	{ name: "Surprised Partyroot", image: "images/equeroot.jpg"}
+	{name : "Surprised Partyroot", image : "images/equeroot.jpg"},
 ];
 
 const TOTAL_CARDS = COMMONS.length + RARES.length + LEGENDARIES.length;
@@ -54,15 +56,15 @@ function generate_card() {
 	let fika  = Math.ceil(Math.random(seed) * 3);
 	let rms   = Math.ceil(Math.random(seed) * 3);
 
-	if (seed < 0.6) {
+	if (seed < 0.7) {
 		rarity    = "Common";
-		index     = Math.floor(seed / 0.6 * COMMONS.length);
+		index     = Math.floor(seed / 0.7 * COMMONS.length);
 		adjective = "";
 		name      = COMMONS[index].name;
 		image     = COMMONS[index].image;
-	} else if (seed < 0.9) {
+	} else if (seed < 0.95) {
 		rarity    = "Rare";
-		index = Math.floor((seed - 0.6) / 0.3 * RARES.length)
+		index     = Math.floor((seed - 0.7) / (0.95 - 0.7) * RARES.length)
 		adjective = "";
 		name      = RARES[index].name;
 		image     = RARES[index].image;
@@ -73,7 +75,7 @@ function generate_card() {
 		rms += 5;
 	} else {
 		rarity    = "Legendary";
-		index     = Math.floor(((seed - 0.9) / 0.1) * LEGENDARIES.length);
+		index     = Math.floor(((seed - 0.95) / (1 - 0.95)) * LEGENDARIES.length);
 		adjective = "";
 		name      = LEGENDARIES[index].name;
 		image     = LEGENDARIES[index].image;
@@ -86,7 +88,7 @@ function generate_card() {
 
 	CARD.style.backgroundImage = `url(${image})`;
 	TITLE.innerText            = `${rarity} ${adjective} ${name}`;
-	TUNNELVISION.innerText     = `Tunnelvision: ${tv}`;
+    TUNNELVISION.innerText = `Tunnelvision: ${tv}`;
 	LINUX.innerText            = `Linux-fu: ${linux}`;
 	FIKA.innerText             = `Fika: ${fika}`;
 	STALLMAN.innerText         = `Stallman-vibes: ${rms}`;
